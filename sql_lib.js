@@ -367,3 +367,13 @@ function optXExec(sql, connection, param) {
 
     return result;
 }
+
+
+/**
+ * Для linux можно посмотреть в этом направлении
+ *
+ * смотри wtv_export_odbc.js
+ * 
+ * var oAssembly = tools.dotnet_host.Object.GetAssembly('Websoft.Discharge.dll');
+ * db = oAssembly.CreateClassObject('Websoft.Discharge.Discharge');*
+ */
