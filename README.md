@@ -8,5 +8,4 @@ var lib = OpenCodeLib(path)
 var connection = "строка ODBC подключения"
 var ssql = "SELECT * FROM таблица"
 var result = lib.optXExec(ssql, connection) // в result упадет результат выборки ssql
-
 ```
