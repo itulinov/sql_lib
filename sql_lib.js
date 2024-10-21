@@ -348,8 +348,8 @@ function exec(sql, connection) {
  * Выполнить sql запрос и вернуть массив объектов
  * @param {string} sql - sql-запрос
  * @param {any} connection - подключение к бд
- * @param {object} param - в этих параметраз мы задаем какой тип нам вернуть
- * @returns {Array}
+ * @param {object} param - в этих параметрах мы задаем какой тип нам вернуть
+ * @returns {array || object}
  */
 function optXExec(sql, connection, param) {
     var resExec = exec(sql, connection); // получить данные
