@@ -1,7 +1,7 @@
 # sql_lib
 ### Вариант использования 1
 ```javascript
-var path = "x-local://wt/web" + "ваш путь до библиотеки" + "sql_lib.js"
+var path = "x-local://wt/web" + "путь до библиотеки" + "sql_lib.js"
 //DropFormsCache(path)
 var lib = OpenCodeLib(path)
 
