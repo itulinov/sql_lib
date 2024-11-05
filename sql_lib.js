@@ -291,7 +291,7 @@ function exec(sql, connection) {
     if (!connect.success) {
         return {
             successfull: false,
-            error: connect.error,
+            error: connect.error + "",
         };
     }
 
@@ -304,7 +304,7 @@ function exec(sql, connection) {
     if (!records.success) {
         return {
             successfull: false,
-            error: records.error,
+            error: records.error + "",
             ADOConnect: connect.activeConnection,
         };
     }
@@ -315,33 +315,6 @@ function exec(sql, connection) {
         ADOConnect: connect.activeConnection,
     };
 }
-
-
-/**
- * УСТАРЕЛО - нужно удалить
- * Выполнить sql запрос с проверкой существования первой записи
- * @param {string} sql - sql запрос
- * @param {any} reset - возвращаем, если запрос неуспешный
- * @param {string} sConnection - строка подключения к БД или имя сервера БД
- * @returns {any}
- */
-/*function optExec(sql, reset, sConnection) {
-    var result = exec(sql, sConnection);
-
-    if (!result.successfull) {
-        return reset;
-    }
-
-    var record = result.ADORecord;
-
-    if (!record.EOF) {
-        record.MoveFirst();
-
-        return record;
-    }
-
-    return reset;
-}*/
 
 
 /**
