@@ -349,4 +349,24 @@ function optXExec(sql, connection, param) {
  * 
  * var oAssembly = tools.dotnet_host.Object.GetAssembly('Websoft.Discharge.dll');
  * db = oAssembly.CreateClassObject('Websoft.Discharge.Discharge');*
+ *
+ *
+ *
+ *
+
+Коллеги, привествую.
+Вопрос по подключению к внешней базе oracle для систем на линукс.
+Посмотрел файлик wtv_export_odbc.js
+  var oAssembly = tools.dotnet_host.Object.GetAssembly('Websoft.Discharge.dll');
+  db = oAssembly.CreateClassObject('Websoft.Discharge.Discharge');
+  db.Init( _source.source_name.Value, _source.db_type.Value );
+  db.SqlExecute( _table.select_query.Value );
+  db.GetNext();
+  var Json = db.GetRowJson();
+В целом понятно , но вопрос, а если вернуть надо не строковое значение а бинарный объект?
+Допустим есть столбец "FileData" типа RAW содержащий данные файла.
+а db.GetRowJson в этом случае возвращает строку  System.Byte[]
+каким методом можно вернуть в нормальном виде.
+и есть ли вообще список доступных методов
+
  */
